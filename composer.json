@@ -1,12 +1,12 @@
 {
-    "name": "launcher/mercurius",
+    "name": "ababnova/mercurius",
     "description": " Real-time Messenger package for Laravel",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://launcher.host/mercurius/",
+    "homepage": "https://AbanNova.host/mercurius/",
     "support": {
-        "issues": "https://github.com/launcher-host/mercurius/issues",
-        "source": "https://github.com/launcher-host/mercurius"
+        "issues": "https://github.com/abannova/mercurius/issues",
+        "source": "https://github.com/abannova/mercurius"
     },
     "keywords": [
         "messenger",
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Launcher\\Mercurius\\": "src/",
-            "Launcher\\Mercurius\\Database\\Seeds\\": "publishable/database/seeds/"
+            "AbanNova\\Mercurius\\": "src/",
+            "AbanNova\\Mercurius\\Database\\Seeds\\": "publishable/database/seeds/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Launcher\\Mercurius\\Tests\\": "tests/"
+            "AbanNova\\Mercurius\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -50,10 +50,10 @@
         },
         "laravel": {
             "providers": [
-                "Launcher\\Mercurius\\MercuriusServiceProvider"
+                "AbanNova\\Mercurius\\MercuriusServiceProvider"
             ],
             "aliases": {
-                "Mercurius": "Launcher\\Mercurius\\Facades\\Mercurius"
+                "Mercurius": "AbanNova\\Mercurius\\Facades\\Mercurius"
             }
         }
     },
