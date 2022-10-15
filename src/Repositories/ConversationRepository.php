@@ -1,11 +1,11 @@
 <?php
 
-namespace AbanNova\Mercurius\Repositories;
+namespace AbanNova \Mercurius\Repositories;
 
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-use AbanNova\Mercurius\Facades\Mercurius;
+use AbanNova \Mercurius\Facades\Mercurius;
 
 class ConversationRepository
 {
@@ -70,7 +70,7 @@ class ConversationRepository
     private function makeSeen($receiver, $sender)
     {
         $this->userConversations($receiver, $sender)
-             ->update(['seen_at' => Carbon::now()]);
+            ->update(['seen_at' => Carbon::now()]);
     }
 
     /**
@@ -88,33 +88,33 @@ class ConversationRepository
         $slug = config('mercurius.fields.slug');
         $name = config('mercurius.fields.name');
         $name = !is_array($name)
-                    ? 'users.'.$name
-                    : 'CONCAT(users.'.implode(", ' ', users.", $name).')';
+            ? 'users.' . $name
+            : 'CONCAT(users.' . implode(", ' ', users.", $name) . ')';
 
         $sql = implode(' ', array_map('trim', [
             'SELECT',
-            '    users.'.$slug.' as slug,',
-            '    '.$name.' as user,',
-            '    users.'.config('mercurius.fields.avatar').',',
+            '    users.' . $slug . ' as slug,',
+            '    ' . $name . ' as user,',
+            '    users.' . config('mercurius.fields.avatar') . ',',
             '    users.is_online,',
-            '    sender.'.$slug.' as sender,',
+            '    sender.' . $slug . ' as sender,',
             '    m.message,',
             '    m.seen_at,',
             '    m.created_at',
             'FROM',
-            '    '.$tbl_messages.' m,',
-            '    '.$tbl_users.' users,',
-            '    '.$tbl_users.' sender,',
+            '    ' . $tbl_messages . ' m,',
+            '    ' . $tbl_users . ' users,',
+            '    ' . $tbl_users . ' sender,',
             '    (',
             '        SELECT MAX(u.id) AS id, u.usr',
             '        FROM',
-            '        '.$tbl_users.',',
+            '        ' . $tbl_users . ',',
             '        (',
-            '            SELECT receiver_id as usr, MAX(id) AS id FROM '.$tbl_messages,
-            '            WHERE deleted_by_sender IS FALSE AND sender_id ='.$user.' GROUP BY usr',
+            '            SELECT receiver_id as usr, MAX(id) AS id FROM ' . $tbl_messages,
+            '            WHERE deleted_by_sender IS FALSE AND sender_id =' . $user . ' GROUP BY usr',
             '            UNION ALL',
-            '            SELECT sender_id as usr, MAX(id) as id FROM '.$tbl_messages,
-            '            WHERE deleted_by_receiver IS FALSE AND receiver_id ='.$user.' GROUP BY usr',
+            '            SELECT sender_id as usr, MAX(id) as id FROM ' . $tbl_messages,
+            '            WHERE deleted_by_receiver IS FALSE AND receiver_id =' . $user . ' GROUP BY usr',
             '        ) u',
             '        GROUP BY u.usr',
             '    ) mm',
@@ -144,14 +144,14 @@ class ConversationRepository
 
         $sql = implode(' ', array_map('trim', [
             'SELECT DISTINCT',
-            '    users.'.config('mercurius.fields.slug').' as slug',
-            'FROM '.$tbl_users.' users, ',
+            '    users.' . config('mercurius.fields.slug') . ' as slug',
+            'FROM ' . $tbl_users . ' users, ',
             '(',
-            '    SELECT receiver_id as id FROM '.$tbl_messages,
-            '    WHERE sender_id ='.$user.' AND deleted_by_receiver IS FALSE',
+            '    SELECT receiver_id as id FROM ' . $tbl_messages,
+            '    WHERE sender_id =' . $user . ' AND deleted_by_receiver IS FALSE',
             '    UNION ALL',
-            '    SELECT sender_id as id FROM '.$tbl_messages,
-            '    WHERE receiver_id ='.$user.' AND deleted_by_sender IS FALSE',
+            '    SELECT sender_id as id FROM ' . $tbl_messages,
+            '    WHERE receiver_id =' . $user . ' AND deleted_by_sender IS FALSE',
             ') mr',
             'WHERE users.id = mr.id',
         ]));
@@ -172,10 +172,10 @@ class ConversationRepository
             $user = is_null($user) ? Auth::user()->id : $user;
 
             $res = Mercurius::model('message')
-                    ->select('sender_id')
-                    ->where('receiver_id', '=', $user)
-                    ->whereNull('seen_at')
-                    ->count();
+                ->select('sender_id')
+                ->where('receiver_id', '=', $user)
+                ->whereNull('seen_at')
+                ->count();
 
             return ['status' => true, 'total' => $res];
         } catch (Exception $e) {

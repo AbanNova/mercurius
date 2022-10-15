@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://www.github.com/AbanNova-host/mercurius/">
+    <a href="https://www.github.com/AbanNova -host/mercurius/">
         <img width="450px" src="logo-mercurius.png" title="mercurius logo">
     </a>
 </p>

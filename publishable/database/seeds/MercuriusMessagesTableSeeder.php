@@ -26,9 +26,9 @@ class MercuriusMessagesTableSeeder extends Seeder
      */
     public function run()
     {
-        $ian = $this->getUser('ian@AbanNova.host');
-        $noa = $this->getUser('noa@AbanNova.host');
-        $lua = $this->getUser('lua@AbanNova.host');
+        $ian = $this->getUser('ian@AbanNova .host');
+        $noa = $this->getUser('noa@AbanNova .host');
+        $lua = $this->getUser('lua@AbanNova .host');
 
         $this->createConversation($lua, $ian);
         $this->createConversation($ian, $noa);
@@ -54,7 +54,7 @@ class MercuriusMessagesTableSeeder extends Seeder
         // Add plenty of messages to test scroll w/ lazy load
         $_dt->addMonth(5);
         for ($i = 1; $i < 60; $i++) {
-            $_msg = 'Hello 6M ago, testing message number '.$i;
+            $_msg = 'Hello 6M ago, testing message number ' . $i;
             $this->addMessage($_msg, $user_a, $user_b, $_dt->addHours(5));
         }
 
@@ -83,8 +83,10 @@ class MercuriusMessagesTableSeeder extends Seeder
         // create the dummy messages.
         //
         $dummyUsers = config('mercurius.models.user')::where(
-                        'id', '>', end($demoUsers)
-                    )->get();
+            'id',
+            '>',
+            end($demoUsers)
+        )->get();
 
         $_dt = Carbon::now()->subDays(3);
         foreach ($dummyUsers as $user) {
@@ -101,7 +103,7 @@ class MercuriusMessagesTableSeeder extends Seeder
     private function createDummyConversations($dt, $dummyUser, $demoUsers)
     {
         foreach ($demoUsers as $demoUser) {
-            $_msg = 'Hello from '.$dummyUser->name;
+            $_msg = 'Hello from ' . $dummyUser->name;
             $this->addMessage($_msg, $dummyUser->id, $demoUser, $dt);
         }
     }
@@ -130,7 +132,8 @@ class MercuriusMessagesTableSeeder extends Seeder
     private function getUser($email)
     {
         return config('mercurius.models.user')::where(
-                'email', $email
-            )->first()->id;
+            'email',
+            $email
+        )->first()->id;
     }
 }

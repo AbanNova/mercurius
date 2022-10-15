@@ -10,7 +10,7 @@ mix.js('resources/js/bootstrap.js', 'publishable/public/js/mercurius.js')
     .webpackConfig({
         resolve: {
             modules: [
-                path.resolve(__dirname, 'vendor/abannova/mercurius/resources/js'),
+                path.resolve(__dirname, 'vendor/AbanNova /mercurius/resources/js'),
                 'node_modules'
             ],
             alias: {

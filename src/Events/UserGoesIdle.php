@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova\Mercurius\Events;
+namespace AbanNova \Mercurius\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -47,6 +47,6 @@ class UserGoesIdle implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('mercurius.'.$this->user);
+        return new PrivateChannel('mercurius.' . $this->user);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova\Mercurius\Events;
+namespace AbanNova \Mercurius\Events;
 
 use Illuminate\Queue\SerializesModels;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova\Mercurius;
+namespace AbanNova \Mercurius;
 
 trait EventMap
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace AbanNova\Mercurius;
+namespace AbanNova \Mercurius;
 
-use AbanNova\Mercurius\Setup\ProvidesScriptVariables;
+use AbanNova \Mercurius\Setup\ProvidesScriptVariables;
 
 class Mercurius
 {
@@ -27,7 +27,7 @@ class Mercurius
     public function __construct()
     {
         foreach ($this->models as $model) {
-            $this->models[$model] = config('mercurius.models.'.$model);
+            $this->models[$model] = config('mercurius.models.' . $model);
         }
     }
 

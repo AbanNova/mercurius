@@ -14,7 +14,7 @@ return [
 
     'models' => [
         'user'    => App\User::class,
-        'message' => AbanNova\Mercurius\Message::class,
+        'message' => AbanNova \Mercurius\Message::class,
     ],
 
     /*
@@ -44,7 +44,7 @@ return [
     |
     */
 
-    //  WIP - https://github.com/AbanNova-host/mercurius/issues/11
+    //  WIP - https://github.com/AbanNova -host/mercurius/issues/11
     // 'display_user_is_typing' => true,
 
 ];

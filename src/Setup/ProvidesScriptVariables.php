@@ -1,8 +1,8 @@
 <?php
 
-namespace AbanNova\Mercurius\Setup;
+namespace AbanNova \Mercurius\Setup;
 
-use AbanNova\Mercurius\Repositories\UserRepository;
+use AbanNova \Mercurius\Repositories\UserRepository;
 
 trait ProvidesScriptVariables
 {
@@ -16,7 +16,7 @@ trait ProvidesScriptVariables
         return json_encode([
             'csrfToken'     => csrf_token(),
             'env'           => config('app.env'),
-            'i18n'          => json_decode(file_get_contents(resource_path('lang/'.app()->getLocale().'/mercurius.json'))),
+            'i18n'          => json_decode(file_get_contents(resource_path('lang/' . app()->getLocale() . '/mercurius.json'))),
             'user'          => (new UserRepository())->getSettings(),
             'pusherKey'     => config('broadcasting.connections.pusher.key'),
             'pusherCluster' => config('broadcasting.connections.pusher.options.cluster'),

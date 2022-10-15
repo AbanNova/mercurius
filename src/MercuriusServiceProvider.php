@@ -1,12 +1,12 @@
 <?php
 
-namespace AbanNova\Mercurius;
+namespace AbanNova \Mercurius;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use AbanNova\Mercurius\Commands\InstallCommand;
-use AbanNova\Mercurius\Setup\MigrationsHandler;
+use AbanNova \Mercurius\Commands\InstallCommand;
+use AbanNova \Mercurius\Setup\MigrationsHandler;
 
 class MercuriusServiceProvider extends ServiceProvider
 {
@@ -19,12 +19,12 @@ class MercuriusServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/../publishable/views', 'mercurius');
-        $this->loadTranslationsFrom(__DIR__.'/../publishable/lang', 'mercurius');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+        $this->loadViewsFrom(__DIR__ . '/../publishable/views', 'mercurius');
+        $this->loadTranslationsFrom(__DIR__ . '/../publishable/lang', 'mercurius');
         $this->registerEvents();
 
-        require __DIR__.'/../routes/channels.php';
+        require __DIR__ . '/../routes/channels.php';
     }
 
     /**
@@ -35,7 +35,7 @@ class MercuriusServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerPublishable();
-        $this->mergeConfigFrom(__DIR__.'/../publishable/config/mercurius.php', 'mercurius');
+        $this->mergeConfigFrom(__DIR__ . '/../publishable/config/mercurius.php', 'mercurius');
 
         $this->loadHelpers();
 
@@ -55,13 +55,13 @@ class MercuriusServiceProvider extends ServiceProvider
      */
     protected function registerPublishable()
     {
-        $_path = __DIR__.'/../publishable/';
+        $_path = __DIR__ . '/../publishable/';
 
         $publishable = [
             'mercurius-config' => ["{$_path}config/mercurius.php" => config_path('mercurius.php')],
             'mercurius-public' => ["{$_path}public" => public_path('vendor/mercurius')],
-            'mercurius-sass'   => [__DIR__.'/../resources/sass/' => resource_path('sass/vendor/mercurius')],
-            'mercurius-js'     => [__DIR__.'/../resources/js/' => resource_path('js/vendor/mercurius')],
+            'mercurius-sass'   => [__DIR__ . '/../resources/sass/' => resource_path('sass/vendor/mercurius')],
+            'mercurius-js'     => [__DIR__ . '/../resources/js/' => resource_path('js/vendor/mercurius')],
             'mercurius-seeds'  => ["{$_path}database/seeds/" => database_path('seeds')],
             'mercurius-lang'   => ["{$_path}lang/" => resource_path('lang')],
             'mercurius-views'  => ["{$_path}views/" => resource_path('views/vendor/mercurius')],
@@ -105,7 +105,7 @@ class MercuriusServiceProvider extends ServiceProvider
      */
     protected function loadHelpers()
     {
-        foreach (glob(__DIR__.'/Helpers/*.php') as $filename) {
+        foreach (glob(__DIR__ . '/Helpers/*.php') as $filename) {
             require_once $filename;
         }
     }

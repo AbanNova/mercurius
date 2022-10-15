@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova\Mercurius;
+namespace AbanNova \Mercurius;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

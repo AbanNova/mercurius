@@ -1,10 +1,10 @@
 <?php
 
-namespace AbanNova\Mercurius\Http\Controllers;
+namespace AbanNova \Mercurius\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use AbanNova\Mercurius\Repositories\UserRepository;
+use AbanNova \Mercurius\Repositories\UserRepository;
 
 class ReceiversController extends Controller
 {

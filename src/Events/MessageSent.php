@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova\Mercurius\Events;
+namespace AbanNova \Mercurius\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -30,7 +30,7 @@ class MessageSent implements ShouldBroadcast
     /**
      * Message.
      *
-     * @var AbanNova\Mercurius\Message
+     * @var AbanNova \Mercurius\Message
      */
     public $message;
 
@@ -63,6 +63,6 @@ class MessageSent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('mercurius.'.$this->receiver);
+        return new PrivateChannel('mercurius.' . $this->receiver);
     }
 }

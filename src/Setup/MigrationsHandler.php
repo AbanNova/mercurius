@@ -3,6 +3,8 @@
 namespace AbanNova\Mercurius\Setup;
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 /**
  * Timestamped Migrations handler.
@@ -80,7 +82,7 @@ class MigrationsHandler
         // Append 1 second per migration to keep the right order
         $date = $this->datetime->addSecond()->Format('Y_m_d_His');
 
-        $_from = __DIR__.'/../../publishable/database/migrations/'.$migration;
+        $_from = __DIR__ . '/../../publishable/database/migrations/' . $migration;
         $_to = database_path("migrations/${date}_${migration}");
 
         $this->publishable[$_from] = $_to;
@@ -95,8 +97,8 @@ class MigrationsHandler
      */
     private function migrationExists(string $migration)
     {
-        return array_first($this->migrations, function ($m) use ($migration) {
-            return ends_with($m, $migration);
+        return Arr::first($this->migrations, function ($m) use ($migration) {
+            return Str::endsWith($m, $migration);
         });
     }
 }

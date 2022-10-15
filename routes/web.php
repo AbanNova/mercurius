@@ -11,7 +11,7 @@
 
 Route::group([
     'as'         => 'mercurius.',
-    'namespace'  => '\AbanNova\Mercurius\Http\Controllers',
+    'namespace'  => '\AbanNova \Mercurius\Http\Controllers',
     'middleware' => [
         // 'Mercurius',
         'web',
