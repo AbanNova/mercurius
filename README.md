@@ -1,15 +1,15 @@
 <p align="center">
-    <a href="https://www.github.com/AbanNova -host/mercurius/" target="_blank">
+    <a href="https://www.github.com/AbanNova-host/mercurius/" target="_blank">
         <img width="450px" src="docs/logo-mercurius-bold.png" title="Mercurius - Messenger for Laravel">
     </a>
 </p>
 
 <p align="center">
-<a href="https://travis-ci.org/AbanNova -host/mercurius"><img src="https://travis-ci.org/AbanNova -host/mercurius.svg?branch=master" alt="Build Status"></a>
+<a href="https://travis-ci.org/AbanNova-host/mercurius"><img src="https://travis-ci.org/AbanNova-host/mercurius.svg?branch=master" alt="Build Status"></a>
 <a href="https://styleci.io/repos/147903408/shield?style=flat"><img src="https://styleci.io/repos/147903408/shield?style=flat" alt="Build Status"></a>
-<a href="https://packagist.org/packages/AbanNova /mercurius"><img src="https://poser.pugx.org/AbanNova /mercurius/v/stable.svg?format=flat" alt="Latest Version"></a>
-<a href="https://packagist.org/packages/AbanNova /mercurius"><img src="https://poser.pugx.org/AbanNova /mercurius/downloads.svg?format=flat" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/AbanNova /mercurius"><img src="https://poser.pugx.org/AbanNova /mercurius/license.svg?format=flat" alt="License"></a>
+<a href="https://packagist.org/packages/AbanNova/mercurius"><img src="https://poser.pugx.org/AbanNova/mercurius/v/stable.svg?format=flat" alt="Latest Version"></a>
+<a href="https://packagist.org/packages/AbanNova/mercurius"><img src="https://poser.pugx.org/AbanNova/mercurius/downloads.svg?format=flat" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/AbanNova/mercurius"><img src="https://poser.pugx.org/AbanNova/mercurius/license.svg?format=flat" alt="License"></a>
 </p>
 
 ## Table of Contents
@@ -73,9 +73,9 @@ Mercurius is a real-time messenger system using Laravel and Vue.js, featuring a 
 
 You can [try a demo](http://mercurius-demo.herokuapp.com/login) of Mercurius. Authenticate using any of the following credentials:
 
-- `ian@AbanNova .host`
-- `noa@AbanNova .host`
-- `lua@AbanNova .host`
+- `ian@AbanNova.host`
+- `noa@AbanNova.host`
+- `lua@AbanNova.host`
 
 Password: `password`
 
@@ -120,7 +120,7 @@ php artisan make:auth
 ##### 4. Install Mercurius
 
 ```bash
-composer require AbanNova /mercurius
+composer require AbanNova/mercurius
 ```
 
 ##### 5. Configuration (optional)
@@ -148,7 +148,7 @@ return [
 
     'models' => [
         'user' => App\User::class,
-        'messages' => AbanNova \Mercurius\Models\Message::class,
+        'messages' => AbanNova\Mercurius\Models\Message::class,
     ],
 
     /*
@@ -179,12 +179,12 @@ composer dump-autoload
 
 ##### 7. User trait
 
-Add `AbanNova \Mercurius\MercuriusUser` trait to your `User` model:
+Add `AbanNova\Mercurius\MercuriusUser` trait to your `User` model:
 
 ```php
 // ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use AbanNova \Mercurius\MercuriusUser;
+use AbanNova\Mercurius\MercuriusUser;
 
 class User extends Authenticatable
 {
@@ -203,9 +203,9 @@ Will add Messages and Users to the system, like in the [demo example](#demo):
 
 Demo Users:
 
-- Ian: `ian@AbanNova .host`
-- Noa: `noa@AbanNova .host`
-- Lua: `lua@AbanNova .host`
+- Ian: `ian@AbanNova.host`
+- Noa: `noa@AbanNova.host`
+- Lua: `lua@AbanNova.host`
 
 Password: `password`
 
@@ -227,7 +227,7 @@ Please see [Customization](docs/customization.md) for more information.
 
 ## Roadmap
 
-Check the [roadmap](https://github.com/AbanNova -host/mercurius/issues/8) for more information.
+Check the [roadmap](https://github.com/AbanNova-host/mercurius/issues/8) for more information.
 
 - Unit Tests
 - Conversation w/ multiple users #13
@@ -244,7 +244,7 @@ Check the [roadmap](https://github.com/AbanNova -host/mercurius/issues/8) for mo
 ## Support
 
 - Create a [new issue](../../issues)
-- Join us on [Slack Channel](http://mercurius-demo.herokuapp.com/join-slack-AbanNova -host)
+- Join us on [Slack Channel](http://mercurius-demo.herokuapp.com/join-slack-AbanNova-host)
 
 <br>
 

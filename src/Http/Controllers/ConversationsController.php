@@ -1,10 +1,10 @@
 <?php
 
-namespace AbanNova \Mercurius\Http\Controllers;
+namespace AbanNova\Mercurius\Http\Controllers;
 
 use Illuminate\Http\Request;
-use AbanNova \Mercurius\Repositories\ConversationRepository;
-use AbanNova \Mercurius\Repositories\UserRepository;
+use AbanNova\Mercurius\Repositories\ConversationRepository;
+use AbanNova\Mercurius\Repositories\UserRepository;
 
 class ConversationsController extends Controller
 {

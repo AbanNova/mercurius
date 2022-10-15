@@ -1,8 +1,8 @@
 <?php
 
-namespace AbanNova \Mercurius;
+namespace AbanNova\Mercurius;
 
-use AbanNova \Mercurius\Setup\ProvidesScriptVariables;
+use AbanNova\Mercurius\Setup\ProvidesScriptVariables;
 
 class Mercurius
 {

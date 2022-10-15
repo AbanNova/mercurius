@@ -1,12 +1,12 @@
 <?php
 
-namespace AbanNova \Mercurius;
+namespace AbanNova\Mercurius;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use AbanNova \Mercurius\Commands\InstallCommand;
-use AbanNova \Mercurius\Setup\MigrationsHandler;
+use AbanNova\Mercurius\Commands\InstallCommand;
+use AbanNova\Mercurius\Setup\MigrationsHandler;
 
 class MercuriusServiceProvider extends ServiceProvider
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace AbanNova \Mercurius\Commands;
+namespace AbanNova\Mercurius\Commands;
 
 use Illuminate\Console\Command;
-use AbanNova \Mercurius\MercuriusServiceProvider;
+use AbanNova\Mercurius\MercuriusServiceProvider;
 
 class InstallCommand extends Command
 {

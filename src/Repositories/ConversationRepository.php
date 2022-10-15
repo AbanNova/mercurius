@@ -1,11 +1,11 @@
 <?php
 
-namespace AbanNova \Mercurius\Repositories;
+namespace AbanNova\Mercurius\Repositories;
 
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
-use AbanNova \Mercurius\Facades\Mercurius;
+use AbanNova\Mercurius\Facades\Mercurius;
 
 class ConversationRepository
 {

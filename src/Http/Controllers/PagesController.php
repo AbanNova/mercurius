@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova \Mercurius\Http\Controllers;
+namespace AbanNova\Mercurius\Http\Controllers;
 
 class PagesController extends Controller
 {

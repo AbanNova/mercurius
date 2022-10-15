@@ -26,9 +26,9 @@ class MercuriusMessagesTableSeeder extends Seeder
      */
     public function run()
     {
-        $ian = $this->getUser('ian@AbanNova .host');
-        $noa = $this->getUser('noa@AbanNova .host');
-        $lua = $this->getUser('lua@AbanNova .host');
+        $ian = $this->getUser('ian@AbanNova.host');
+        $noa = $this->getUser('noa@AbanNova.host');
+        $lua = $this->getUser('lua@AbanNova.host');
 
         $this->createConversation($lua, $ian);
         $this->createConversation($ian, $noa);

@@ -1,6 +1,6 @@
 <?php
 
-namespace AbanNova \Mercurius\Facades;
+namespace AbanNova\Mercurius\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
