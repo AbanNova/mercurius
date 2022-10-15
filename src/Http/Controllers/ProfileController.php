@@ -1,13 +1,13 @@
 <?php
 
-namespace Launcher\Mercurius\Http\Controllers;
+namespace AbanNova\Mercurius\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Launcher\Mercurius\Events\UserGoesActive;
-use Launcher\Mercurius\Events\UserGoesInactive;
-use Launcher\Mercurius\Events\UserStatusChanged;
-use Launcher\Mercurius\Repositories\ConversationRepository;
-use Launcher\Mercurius\Repositories\UserRepository;
+use AbanNova\Mercurius\Events\UserGoesActive;
+use AbanNova\Mercurius\Events\UserGoesInactive;
+use AbanNova\Mercurius\Events\UserStatusChanged;
+use AbanNova\Mercurius\Repositories\ConversationRepository;
+use AbanNova\Mercurius\Repositories\UserRepository;
 
 class ProfileController extends Controller
 {

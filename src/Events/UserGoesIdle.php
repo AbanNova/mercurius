@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius\Events;
+namespace AbanNova\Mercurius\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;

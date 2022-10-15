@@ -13,9 +13,9 @@ class MercuriusUsersTableSeeder extends Seeder
     {
         // Seed Mercurius Demo Users
         //
-        $this->createUser('Ian Fox', 'ian@launcher.host', 'avatar_ian.png');
-        $this->createUser('Noa Robison', 'noa@launcher.host', 'avatar_noa.png');
-        $this->createUser('Lua Adison', 'lua@launcher.host', 'avatar_lua.png');
+        $this->createUser('Ian Fox', 'ian@AbanNova.host', 'avatar_ian.png');
+        $this->createUser('Noa Robison', 'noa@AbanNova.host', 'avatar_noa.png');
+        $this->createUser('Lua Adison', 'lua@AbanNova.host', 'avatar_lua.png');
 
         // Seed random dummy users
         factory(config('mercurius.models.user'), 20)->create([

@@ -1,8 +1,8 @@
 <?php
 
-namespace Launcher\Mercurius\Tests\Unit;
+namespace AbanNova\Mercurius\Tests\Unit;
 
-use Launcher\Mercurius\Tests\TestCase;
+use AbanNova\Mercurius\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {

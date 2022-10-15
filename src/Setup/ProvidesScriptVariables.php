@@ -1,8 +1,8 @@
 <?php
 
-namespace Launcher\Mercurius\Setup;
+namespace AbanNova\Mercurius\Setup;
 
-use Launcher\Mercurius\Repositories\UserRepository;
+use AbanNova\Mercurius\Repositories\UserRepository;
 
 trait ProvidesScriptVariables
 {

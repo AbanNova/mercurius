@@ -1,9 +1,9 @@
 <?php
 
-namespace Launcher\Mercurius\Repositories;
+namespace AbanNova\Mercurius\Repositories;
 
-use Launcher\Mercurius\Events\MessageSent;
-use Launcher\Mercurius\Facades\Mercurius;
+use AbanNova\Mercurius\Events\MessageSent;
+use AbanNova\Mercurius\Facades\Mercurius;
 
 class MessageRepository
 {
@@ -56,7 +56,7 @@ class MessageRepository
      * Messages are permanently removed from the system when removed from
      * both users: Sender and Receiver.
      *
-     * @param \Launcher\Mercurius\Message $message
+     * @param \AbanNova\Mercurius\Message $message
      * @param int                         $user
      *
      * @return \Illuminate\Support\Collection

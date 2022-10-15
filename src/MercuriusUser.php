@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius;
+namespace AbanNova\Mercurius;
 
 use Illuminate\Database\Eloquent\Builder;
 

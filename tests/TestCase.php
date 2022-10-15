@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius\Tests;
+namespace AbanNova\Mercurius\Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 

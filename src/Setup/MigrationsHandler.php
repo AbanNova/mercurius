@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius\Setup;
+namespace AbanNova\Mercurius\Setup;
 
 use Illuminate\Support\Carbon;
 

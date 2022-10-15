@@ -4,5 +4,5 @@ Route::group([
     'as'         => 'mercurius.',
     'middleware' => 'api',
 ], function () {
-    $namespaceprefix = '\\Launcher\\Mercurius\\Http\\Controllers\\';
+    $namespaceprefix = '\\AbanNova\\Mercurius\\Http\\Controllers\\';
 });

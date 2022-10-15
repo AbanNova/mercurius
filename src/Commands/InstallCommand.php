@@ -1,9 +1,9 @@
 <?php
 
-namespace Launcher\Mercurius\Commands;
+namespace AbanNova\Mercurius\Commands;
 
 use Illuminate\Console\Command;
-use Launcher\Mercurius\MercuriusServiceProvider;
+use AbanNova\Mercurius\MercuriusServiceProvider;
 
 class InstallCommand extends Command
 {

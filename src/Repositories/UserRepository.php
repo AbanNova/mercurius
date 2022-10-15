@@ -1,10 +1,10 @@
 <?php
 
-namespace Launcher\Mercurius\Repositories;
+namespace AbanNova\Mercurius\Repositories;
 
 use Auth;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Launcher\Mercurius\Facades\Mercurius;
+use AbanNova\Mercurius\Facades\Mercurius;
 
 class UserRepository
 {

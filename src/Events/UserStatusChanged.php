@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius\Events;
+namespace AbanNova\Mercurius\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -8,7 +8,7 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Launcher\Mercurius\Repositories\ConversationRepository;
+use AbanNova\Mercurius\Repositories\ConversationRepository;
 
 class UserStatusChanged implements ShouldBroadcast
 {

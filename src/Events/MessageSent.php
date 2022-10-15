@@ -1,6 +1,6 @@
 <?php
 
-namespace Launcher\Mercurius\Events;
+namespace AbanNova\Mercurius\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -30,7 +30,7 @@ class MessageSent implements ShouldBroadcast
     /**
      * Message.
      *
-     * @var Launcher\Mercurius\Message
+     * @var AbanNova\Mercurius\Message
      */
     public $message;
 
